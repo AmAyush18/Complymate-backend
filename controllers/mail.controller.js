@@ -38,7 +38,7 @@ export const sendEmail = async (req, res) => {
 
       transporter.sendMail({
         from: process.env.SMTP_FROM, 
-        to: email,
+        to: process.env.SMTP_TO,
         subject: subject,
         html: html
         }, (error, info) => {
